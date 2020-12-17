@@ -33,8 +33,10 @@ export const Card = styled.div`
   background-color: ${colors.white};
 
   @media(max-width: ${pxToRem(1024)}) {
-    border-radius: ${pxToRem(8)} ${pxToRem(8)} ${pxToRem(0)} ${pxToRem(0)};
     min-height:  98%;
+    width: 100%;
+    
+    border-radius: ${pxToRem(8)} ${pxToRem(8)} ${pxToRem(0)} ${pxToRem(0)};
   }
 `;
 
@@ -53,6 +55,11 @@ export const H1 = styled.h1`
 export const Small = styled.small`
   font-size: ${pxToRem(18)};
   color: ${colors.grey};
+
+  a { 
+    color: ${colors.blue};
+    text-decoration: underline;
+  }
 
   @media(max-width: ${pxToRem(1024)}) {
     font-size: ${pxToRem(14)};

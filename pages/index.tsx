@@ -4,6 +4,7 @@ import { Container, Card, H1, Small, P, Strong, Wrap } from '../styles/home';
 import Button from '../components/Button';
 import Input from '../components/Input';
 import { useCallback, useState } from "react";
+import { linkToProfile } from "../config";
 
 export default function Home({ cdi_daily }) {
   const [selectedButton, setSelectedButton] = useState();
@@ -12,12 +13,11 @@ export default function Home({ cdi_daily }) {
     setSelectedButton(itemId)
   }, [])
 
-
   return (
     <Container>
       <Card>
         <H1>Calculadora de rendimento no nubank com resgate planejado</H1>
-        <Small>Não oficial, desenvolvido por <a>Gabriel Dissotti</a></Small>
+        <Small>Não oficial, desenvolvido por <a href={linkToProfile}>Gabriel Dissotti</a></Small>
 
         <P>Qual valor você pretende investir?</P>
         <Input />

@@ -2,19 +2,24 @@ import React, { useCallback, useMemo, useState } from 'react';
 
 import { Container } from './styles';
 
-const Input: React.FC = () => {
+type IProps = {
+  onChange(value: number): void
+}
+
+const Input: React.FC<IProps> = ({ onChange }) => {
   const [value, setValue] = useState('R$ ');
   const getJustNumbers = useMemo(() => /^\D+/g, [])
 
-  const sanitize = (value: string) => value.replace(getJustNumbers, '')
-  const format = (value: string) => 'R$ ' + value;
+  const sanitize = (typedValue: string) => Number(typedValue.replace(getJustNumbers, ''))
+  
+  const format = (sanitizedValue: number) => 'R$ '.concat(sanitizedValue.toString());
 
   const handleChange = useCallback((e) => {
     const newValue = e.target.value;
 
     const sanitizedValue = sanitize(newValue);
 
-    console.log(sanitizedValue)
+    onChange(sanitizedValue);
 
     const formattedValue = format(sanitizedValue)
 

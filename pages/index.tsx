@@ -20,7 +20,7 @@ export default function Home({ cdi_daily }) {
         <Small>Não oficial, desenvolvido por <a>Gabriel Dissotti</a></Small>
 
         <P>Qual valor você pretende investir?</P>
-        <Input type="text"/>
+        <Input />
 
         <P>Quando você quer ter o dinheiro disponível?</P>
         <Wrap>

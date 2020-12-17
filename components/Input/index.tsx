@@ -3,7 +3,7 @@ import React, { useCallback, useMemo, useState } from 'react';
 import { Container } from './styles';
 
 const Input: React.FC = () => {
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState('R$ ');
   const getJustNumbers = useMemo(() => /^\D+/g, [])
 
   const sanitize = (value: string) => value.replace(getJustNumbers, '')

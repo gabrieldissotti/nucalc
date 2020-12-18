@@ -64,7 +64,9 @@ export default function Home({ cdi_daily }) {
     setIncomePercent(option.income_percent)
     setAdditionalIncomePercent(option.additional_income_percent)
     
-    const incomePerMonth = amount * (option.income_percent/12);
+    const incomePerMonth = currency(option.income_percent, {
+      precision: 8
+    }).divide(12).divide(100).multiply(amount).value
 
     const totalIncome = incomePerMonth * option.months_to_debit;
 

@@ -17,7 +17,7 @@ const Input: React.FC<IProps> = ({ onChange }) => {
 
     const sanitizedValue = sanitize(newValue);
 
-    if (currency(sanitizedValue).value > currency(999999999999999)) return;
+    if (currency(sanitizedValue).value > currency(999999999999999).value) return;
 
     onChange(currency(sanitizedValue).divide(100).value);
 

@@ -9,6 +9,8 @@ import Input from '../components/Input';
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { linkToProfile } from "../config";
 
+const UPDATE_CDI_VALUE_EACH_HOUR = 3600;
+
 export default function Home({ cdi_daily }) {
   const [selectedOption, setSelectedOption] = useState();
   const [amount, setAmount] = useState(0);
@@ -116,8 +118,7 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       cdi_daily: currency(data?.results[0]?.cdi_daily).value
-      // cdi_daily: currency(1).add('.90').value
     },
-    revalidate: 10
+    revalidate: UPDATE_CDI_VALUE_EACH_HOUR
   }
 }

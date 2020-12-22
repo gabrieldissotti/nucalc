@@ -8,12 +8,14 @@ type IProps = {
 }
 
 export const Container = styled.button<IProps>`
+  
   padding: ${pxToRem(8)} ${pxToRem(16)};
   margin-right: ${pxToRem(16)};
   margin-bottom: ${pxToRem(16)};
   
   font-size: ${pxToRem(18)};
   border-radius: ${pxToRem(8)};
+  background-color: ${colors.whiteDark1};
   border: ${pxToRem(1)} solid ${colors.greyLight};
   color: ${colors.greyDark};
   cursor: pointer;

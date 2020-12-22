@@ -36,7 +36,7 @@ const Input: React.FC<IProps> = ({ onChange }) => {
     setValue(currency(formattedValue).format({ symbol: 'R$ ', separator: '.', decimal: ',' }))
   }, [sanitize])
 
-  return <Container onChange={handleChange} value={value} />;
+  return <Container onChange={handleChange} value={value} type='tel' />;
 }
 
 export default Input;

@@ -10,7 +10,9 @@ import colors from './colors';
 
 export const Container = styled.div`
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  height: min-content;
+
 
   display: flex;
   align-items: center;

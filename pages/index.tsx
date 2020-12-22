@@ -16,6 +16,7 @@ export default function Home({ cdi_daily }) {
   const [amount, setAmount] = useState(0);
   const [income, setIncome] = useState(0);
   const [incomePercent, setIncomePercent] = useState('0');
+  const [moreThan, setMoreThan] = useState(0);
   const [additionalIncomePercent, setAdditionalIncomePercent] = useState('0');
   const today = useMemo<Date>(() => new Date(), []);
 
@@ -70,9 +71,15 @@ export default function Home({ cdi_daily }) {
       precision: 8
     }).divide(12).divide(100).multiply(amount).value
 
-    const totalIncome = incomePerMonth * option.months_to_debit;
+    const incomeWithoutPlan = currency(cdi_daily, {
+      precision: 8
+    }).divide(12).divide(100).multiply(amount).value
+
+    const totalIncome = Number(currency(incomePerMonth).multiply(option.months_to_debit));
+    const totalIncomeWithoutPlan = Number(currency(totalIncome).subtract(currency(incomeWithoutPlan).multiply(option.months_to_debit)));
 
     setIncome(totalIncome)
+    setMoreThan(totalIncomeWithoutPlan)
   }, [selectedOption, amount])
 
   return (
@@ -104,6 +111,10 @@ export default function Home({ cdi_daily }) {
         <P>Se investir hoje, seu rendimento será de:</P>
         <Strong>{currency(income).format({ symbol: 'R$ ', separator: '.', decimal: ',' })}</Strong>
         <Small> com {incomePercent}% ao ano ({additionalIncomePercent} do CDI) </Small>
+        <br />
+        <Small> {currency(moreThan).format({ symbol: 'R$ ', separator: '.', decimal: ',' })} a mais que o resgate a qualquer momento</Small>
+
+        
       </Card>
     </Container>
   )

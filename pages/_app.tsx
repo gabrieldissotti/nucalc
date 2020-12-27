@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { useRouter } from "next/router";
 
 import * as GoogleAnalyticsAPI from "../apis/GoogleAnalyticsAPI";
 
@@ -8,17 +7,6 @@ import { Helmet } from 'react-helmet';
 
 function MyApp({ Component, pageProps }) {
 
-  const router = useRouter();
-
-  useEffect(() => {
-    const handleRouteChange = (url: URL) => {
-      GoogleAnalyticsAPI.pageview(url);
-    };
-    router.events.on("routeChangeComplete", handleRouteChange);
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
-    };
-  }, [router.events]);
 
   return (
     <>
@@ -28,7 +16,7 @@ function MyApp({ Component, pageProps }) {
 
         <script
           async
-          src={`https://www.googletagmanager.com/gtag/js?id=${GoogleAnalyticsAPI.GA_TRACKING_ID}`}
+          src={`https://www.googletagmanager.com/gtag/js?id=G-B88FCC8KDR`}
         />
         <script
           dangerouslySetInnerHTML={{
@@ -36,8 +24,8 @@ function MyApp({ Component, pageProps }) {
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-                gtag('config', '${GoogleAnalyticsAPI.GA_TRACKING_ID}', {
-                  page_path: window.location.pathname,
+                gtag('config', 'G-B88FCC8KDR', {
+                  page_path: /,
                 });
             `
           }}

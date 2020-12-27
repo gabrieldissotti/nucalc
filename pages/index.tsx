@@ -8,10 +8,25 @@ import Input from '../components/Input';
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { linkToProfile } from "../config";
 import FeedbackButton from "../components/FeedbackButton";
+import { useRouter } from "next/router";
+import * as GoogleAnalyticsAPI from "../apis/GoogleAnalyticsAPI";
 
 const UPDATE_CDI_VALUE_EACH_HOUR = 3600;
 
 export default function Home({ cdi_daily }) {
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = (url: URL) => {
+      GoogleAnalyticsAPI.pageview(url);
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
+
   const [selectedOption, setSelectedOption] = useState();
   const [amount, setAmount] = useState(0);
   const [income, setIncome] = useState(0);

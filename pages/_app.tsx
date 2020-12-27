@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
         <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=G-B88FCC8KDR`}
-        />
+        ></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps }) {
                 });
             `
           }}
-        />
+        ></script>
       </Helmet>
       <Component {...pageProps} />
     </>

@@ -3,7 +3,6 @@ import { addMonths, format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import currency from 'currency.js';
 
-import { Container, Card, H1, Small, P, Strong, Wrap } from '../styles/home';
 import Button from '../components/Button';
 import Input from '../components/Input';
 import { useCallback, useEffect, useMemo, useState } from "react";
@@ -83,16 +82,15 @@ export default function Home({ cdi_daily }) {
   }, [selectedOption, amount])
 
   return (
-    <Container>
-      <Card>
-        <H1>Calculadora de rendimento no nubank com resgate planejado</H1>
-        <Small>Não oficial, desenvolvido por <a href={linkToProfile}>Gabriel Dissotti</a></Small>
+    <div className="container">
+      <div className="card">
+        <h1>Calculadora de rendimento no nubank com resgate planejado</h1>
+        <small>Não oficial, desenvolvido por <a href={linkToProfile}>Gabriel Dissotti</a></small>
 
-        <P>Qual valor você pretende investir?</P>
+        <p>Qual valor você pretende investir?</p>
         <Input onChange={(value: number) => setAmount(value)}/>
 
-        <P>Quando você quer ter o dinheiro disponível?</P>
-        <Wrap>
+        <p>Quando você quer ter o dinheiro disponível?</p>
           {
             options.map(option => (
               <Button
@@ -106,17 +104,14 @@ export default function Home({ cdi_daily }) {
               </Button>
             ))
           }
-        </Wrap>
 
-        <P>Se investir hoje, seu rendimento será de:</P>
-        <Strong>{currency(income).format({ symbol: 'R$ ', separator: '.', decimal: ',' })}</Strong>
-        <Small> com {incomePercent}% ao ano ({additionalIncomePercent} do CDI) </Small>
+        <p>Se investir hoje, seu rendimento será de:</p>
+        <strong>{currency(income).format({ symbol: 'R$ ', separator: '.', decimal: ',' })}</strong>
+        <small> com {incomePercent}% ao ano ({additionalIncomePercent} do CDI) </small>
         <br />
-        <Small> {currency(moreThan).format({ symbol: 'R$ ', separator: '.', decimal: ',' })} a mais que o resgate a qualquer momento</Small>
-
-        
-      </Card>
-    </Container>
+        <small> {currency(moreThan).format({ symbol: 'R$ ', separator: '.', decimal: ',' })} a mais que o resgate a qualquer momento</small>
+      </div>
+    </div>
   )
 }
 

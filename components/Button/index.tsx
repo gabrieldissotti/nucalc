@@ -1,14 +1,17 @@
 import React from 'react';
 
-import { Container } from './styles';
-
 type IProps = {
   isSelected?: boolean;
-  handleSelect(itemId: string): void
+  handleSelect(): void
 }
 
 const Button: React.FC<IProps> = ({ children, isSelected, handleSelect }) => {
-  return <Container isSelected={isSelected} onClick={handleSelect}>{children}</Container>;
+  return (
+    <button
+      className={`${isSelected && 'isSelected'}`}
+      onClick={() => handleSelect()}
+    >{children}</button>
+  );
 }
 
 export default Button;

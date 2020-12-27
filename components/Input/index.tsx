@@ -1,8 +1,6 @@
 import React, { useCallback, useMemo, useState } from 'react';
 import currency from 'currency.js';
 
-import { Container } from './styles';
-
 type IProps = {
   onChange(value: number): void
 }
@@ -36,7 +34,7 @@ const Input: React.FC<IProps> = ({ onChange }) => {
     setValue(currency(formattedValue).format({ symbol: 'R$ ', separator: '.', decimal: ',' }))
   }, [sanitize])
 
-  return <Container onChange={handleChange} value={value} type='tel' />;
+  return <input onChange={handleChange} value={value} type='tel' />;
 }
 
 export default Input;

@@ -1,0 +1,77 @@
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  height: min-content;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: $primary;
+
+  @media (max-width: 64rem) {
+    align-items: flex-end;
+  }
+
+  .card {
+    width: 32.9375rem;
+    min-height: 37.3125rem;
+
+    padding: 2rem;
+    border-radius: 0.5rem;
+    background-color: $white;
+
+    @media (max-width: 64rem) {
+      min-height: 98%;
+      width: 100%;
+
+      border-radius: 0.5rem 0.5rem 0 0;
+    }
+  }
+
+  h1 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+
+    @media (max-width: 64rem) {
+      margin-bottom: 0.5rem;
+
+      font-size: 1.25rem;
+    }
+  }
+
+  p {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+
+    font-size: 1.25rem;
+
+    @media (max-width: 64rem) {
+      font-size: 1rem;
+    }
+  }
+
+  strong {
+    font-size: 1.75rem;
+    color: $green;
+    font-weight: 500;
+
+    @media (max-width: 64rem) {
+      font-size: 1.5rem;
+    }
+  }
+
+  small {
+    font-size: 1.125rem;
+    color: $grey;
+
+    a {
+      color: $blue;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 64rem) {
+      font-size: 0.875rem;
+    }
+  }
+}

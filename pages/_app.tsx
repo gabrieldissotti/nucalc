@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import { Head } from 'next/document';
 import { useRouter } from "next/router";
 
 import * as GoogleAnalyticsAPI from "../apis/GoogleAnalyticsAPI";
 
 import '../styles/main.scss'
+import { Helmet } from 'react-helmet';
 
 function MyApp({ Component, pageProps }) {
 
@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <Head>
+      <Helmet>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;500&display=swap" rel="stylesheet" />
 
@@ -42,10 +42,10 @@ function MyApp({ Component, pageProps }) {
             `
           }}
         />
-      </Head>
+      </Helmet>
       <Component {...pageProps} />
     </>
   )
 }
 
-export default MyApp
+export default MyApp;

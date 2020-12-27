@@ -5,8 +5,9 @@ import currency from 'currency.js';
 
 import Button from '../components/Button';
 import Input from '../components/Input';
-import { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { linkToProfile } from "../config";
+import FeedbackButton from "../components/FeedbackButton";
 
 const UPDATE_CDI_VALUE_EACH_HOUR = 3600;
 
@@ -110,6 +111,7 @@ export default function Home({ cdi_daily }) {
         <small> com {incomePercent}% ao ano ({additionalIncomePercent} do CDI) </small>
         <br />
         <small> {currency(moreThan).format({ symbol: 'R$ ', separator: '.', decimal: ',' })} a mais que o resgate a qualquer momento</small>
+        <FeedbackButton />
       </div>
     </div>
   )

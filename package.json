@@ -11,6 +11,7 @@
     "currency.js": "^2.0.3",
     "date-fns": "^2.16.1",
     "next": "10.0.3",
+    "next-images": "^1.6.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-helmet": "^6.1.0",

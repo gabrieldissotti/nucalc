@@ -6,18 +6,26 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <meta property="og:url"                content='https://rendimento-nubank-resgate-planejado-1vhoxpb3s.vercel.app' />
-          <meta property="url"                content='https://rendimento-nubank-resgate-planejado-1vhoxpb3s.vercel.app' />
-          <meta property="og:type"               content="article" />
-          <meta property="type"               content="article" />
-          <meta property="og:title"              content="Calcular rendimento com resgate planejado no Nubank" />
-          <meta property="title"              content="Calcular rendimento com resgate planejado no Nubank" />
-          <meta property="og:description"        content="Você sabe quanto seu dinheiro está deixando de render?" />
-          <meta property="description"        content="Você sabe quanto seu dinheiro está deixando de render?" />
+          <meta property="og:url" content='https://rendimento-nubank-resgate-planejado-1vhoxpb3s.vercel.app' />
+          <meta property="url" content='https://rendimento-nubank-resgate-planejado-1vhoxpb3s.vercel.app' />
+          <meta name="url" content='https://rendimento-nubank-resgate-planejado-1vhoxpb3s.vercel.app' />
+          <meta property="og:type" content="article" />
+          <meta property="type" content="article" />
+          <meta name="type" content="article" />
+          <meta property="og:title" content="Calcular rendimento com resgate planejado no Nubank" />
+          <meta property="title" content="Calcular rendimento com resgate planejado no Nubank" />
+          <meta name="title" content="Calcular rendimento com resgate planejado no Nubank" />
+          <meta property="og:description" content="Você sabe quanto seu dinheiro está deixando de render?" />
+          <meta property="description" content="Você sabe quanto seu dinheiro está deixando de render?" />
+          <meta name="description" content="Você sabe quanto seu dinheiro está deixando de render?" />
           <meta property="og:image" content={Cover} />
           <meta property="image" content={Cover} />
+          <meta name="image" content={Cover} />
           <meta property="og:locale" content="pt_BR" />
-          <meta property="og:site_name" content="Calcular rendimento com resgate planejado no Nubank"/>
+          <meta property="og:site_name" content="Calcular rendimento com resgate planejado no Nubank" />
+          <meta name="twitter:url" content="https://rendimento-nubank-resgate-planejado-1vhoxpb3s.vercel.app" />
+          <meta name="twitter:title" content="Calcular rendimento com resgate planejado no Nubank" />
+          <meta name="twitter:description" content="Você sabe quanto seu dinheiro está deixando de render?" />
 
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           

@@ -6,7 +6,7 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <meta property="og:url"                content={window.location.href} />
+          <meta property="og:url"                content='https://rendimento-nubank-resgate-planejado-1vhoxpb3s.vercel.app' />
           <meta property="og:type"               content="website" />
           <meta property="og:title"              content="Calcular rendimento com resgate planejado no Nubank" />
           <meta property="og:description"        content="Você sabe quanto seu dinheiro está deixando de render?" />

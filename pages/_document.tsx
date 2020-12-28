@@ -7,12 +7,19 @@ export default class MyDocument extends Document {
       <Html>
         <Head>
           <meta property="og:url"                content='https://rendimento-nubank-resgate-planejado-1vhoxpb3s.vercel.app' />
-          <meta property="og:type"               content="website" />
+          <meta property="og:type"               content="article" />
+          <meta property="type"               content="article" />
           <meta property="og:title"              content="Calcular rendimento com resgate planejado no Nubank" />
+          <meta property="title"              content="Calcular rendimento com resgate planejado no Nubank" />
           <meta property="og:description"        content="Você sabe quanto seu dinheiro está deixando de render?" />
+          <meta property="description"        content="Você sabe quanto seu dinheiro está deixando de render?" />
           <meta property="og:image" content={Cover} />
-          
+          <meta property="image" content={Cover} />
+          <meta property="og:locale" content="pt_BR" />
+          <meta property="og:site_name" content="Calcular rendimento com resgate planejado no Nubank"/>
+
           <link rel="preconnect" href="https://fonts.gstatic.com" />
+          
           <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;500;600&display=swap" rel="stylesheet" />
           
           {/* Global Site Tag (gtag.js) - Google Analytics */}

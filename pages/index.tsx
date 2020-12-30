@@ -1,5 +1,5 @@
 import { GetStaticProps } from "next";
-import { addMonths, format } from 'date-fns';
+import { addMonths, format, startOfHour } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import currency from 'currency.js';
 
@@ -112,6 +112,9 @@ export default function Home({ cdi_daily }) {
         <small> com {incomePercent}% ao ano ({additionalIncomePercent} do CDI) </small>
         <br />
         <small> {currency(moreThan).format({ symbol: 'R$ ', separator: '.', decimal: ',' })} a mais que o resgate a qualquer momento</small>
+        <br />
+        <br />
+        <small>CDI atualizado automaticamente hoje às {format(startOfHour(new Date()), 'HH:mm', { locale: ptBR })}.</small>
         <FeedbackButton />
       </div>
     </div>

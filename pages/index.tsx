@@ -8,7 +8,6 @@ import Input from '../components/Input';
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { linkToProfile } from "../config";
 import FeedbackButton from "../components/FeedbackButton";
-
 const UPDATE_CDI_VALUE_EACH_HOUR = 3600;
 
 export default function Home({ cdi_daily }) {
@@ -20,6 +19,7 @@ export default function Home({ cdi_daily }) {
   const [moreThan, setMoreThan] = useState(0);
   const [additionalIncomePercent, setAdditionalIncomePercent] = useState('0');
   const today = useMemo<Date>(() => new Date(), []);
+  
 
   const options = useMemo(() => ([{
       id: 1,
@@ -56,7 +56,7 @@ export default function Home({ cdi_daily }) {
 
   const handleSelect = useCallback((itemId) => {
     setSelectedOption(itemId)
-  }, [selectedOption, ])
+  }, [selectedOption,])
 
   useEffect(() => {
     if (!selectedOption) {

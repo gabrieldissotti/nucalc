@@ -10,7 +10,7 @@ import GithubIcon from '../../assets/images/github-icon.png';
 const Copy: React.FC = () => {
   return (
     <div className="copy-container">
-      <small>Siga nas redes sociaispara acompanhar as novidades:</small>
+      <small>Siga nas redes sociais para acompanhar as novidades:</small>
 
       <div className="socials">
         <a href={linkToFacebook} target='_blank'>

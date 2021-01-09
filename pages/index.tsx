@@ -6,12 +6,13 @@ import currency from 'currency.js';
 import Button from '../components/Button';
 import Input from '../components/Input';
 import React, { useCallback, useEffect, useMemo, useState } from "react";
-import { linkToProfile } from "../config";
 import FeedbackButton from "../components/FeedbackButton";
+import InstallButton from '../components/InstallButton'
+import Copy from "../components/Copy";
+
 const UPDATE_CDI_VALUE_EACH_HOUR = 3600;
 
 export default function Home({ cdi_daily }) {
-
   const [selectedOption, setSelectedOption] = useState();
   const [amount, setAmount] = useState(0);
   const [income, setIncome] = useState(0);
@@ -86,15 +87,14 @@ export default function Home({ cdi_daily }) {
   return (
     <div className="container">
       <div className="card">
-        <h1>Calculadora de rendimento no nubank com resgate planejado</h1>
-        <small>Não oficial, desenvolvido por <a href={linkToProfile}>Gabriel Dissotti</a></small>
+        <h1>Calcular resgate planejado do Nubank</h1>
 
         <p>Qual valor você pretende investir?</p>
         <Input onChange={(value: number) => setAmount(value)}/>
 
         <p>Quando você quer ter o dinheiro disponível?</p>
           {
-            options.map(option => (
+            options.slice(1).map(option => (
               <Button
                 key={option.id}
                 handleSelect={() => handleSelect(option.id)}
@@ -105,18 +105,22 @@ export default function Home({ cdi_daily }) {
                 }
               </Button>
             ))
-          }
+        }
 
-        <p>Se investir hoje, seu rendimento será de:</p>
+        <p className="customMargin">Se investir hoje, seu rendimento será de:</p>
         <strong>{currency(income).format({ symbol: 'R$ ', separator: '.', decimal: ',' })}</strong>
         <small> com {incomePercent}% ao ano ({additionalIncomePercent} do CDI) </small>
         <br />
         <small> {currency(moreThan).format({ symbol: 'R$ ', separator: '.', decimal: ',' })} a mais que o resgate a qualquer momento</small>
         <br />
-        <br />
         <small>CDI atualizado automaticamente hoje às {format(startOfHour(new Date()), 'HH:mm', { locale: ptBR })}.</small>
-        <FeedbackButton />
+        <div className="wrapButtons">
+          <FeedbackButton />
+          <InstallButton />
+        </div>
       </div>
+
+      <Copy />
     </div>
   )
 }

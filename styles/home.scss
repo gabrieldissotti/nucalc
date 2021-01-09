@@ -1,30 +1,26 @@
 .container {
   width: 100vw;
   min-height: 100vh;
+  padding-top: 0.5rem;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
   background-color: $primary;
 
-  @media (max-width: 64rem) {
-    align-items: flex-end;
-  }
-
   .card {
     width: 32.9375rem;
-    min-height: 37.3125rem;
+    min-height: unset;
 
-    padding: 2rem;
-    border-radius: 0.5rem;
+    padding: 1rem;
     background-color: $white;
+    border-radius: 0.3125rem;
 
     @media (max-width: 64rem) {
-      min-height: 98%;
+      min-height: 99%;
       width: 100%;
-
-      border-radius: 0.5rem 0.5rem 0 0;
     }
   }
 
@@ -40,13 +36,17 @@
   }
 
   p {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
 
     font-size: 1.25rem;
 
     @media (max-width: 64rem) {
       font-size: 1rem;
+    }
+
+    &.customMargin {
+      margin-top: 0.5rem;
     }
   }
 
@@ -72,5 +72,12 @@
     @media (max-width: 64rem) {
       font-size: 0.875rem;
     }
+  }
+
+  div.wrapButtons {
+    margin-top: 2rem;
+
+    display: flex;
+    justify-content: space-between;
   }
 }

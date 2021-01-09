@@ -1,9 +1,10 @@
-.feedback-button {
+.install-button {
   position: absolute;
-  bottom: 1rem;
+  bottom: 5rem;
   right: 1.5rem;
 
   height: 3.5rem;
+  min-width: 10.4275rem;
   padding: 0.6rem 0.6rem 0.4rem 0.6rem;
 
   display: flex;
@@ -18,12 +19,14 @@
     right: unset;
     margin: auto;
 
+    margin-left: 0.3125rem;
+    min-width: unset;
+
     width: 100%;
 
     justify-content: center;
 
-    background-color: $white;
-    border: 1px solid $primary;
+    background-color: $primary;
   }
 
   img {
@@ -32,8 +35,20 @@
 
     margin-right: 0.5rem;
 
-    @media (max-width: 64rem) {
+    &.light-icon {
       display: none;
+    }
+    &.dark-icon {
+      display: block;
+    }
+
+    @media (max-width: 64rem) {
+      &.light-icon {
+        display: block;
+      }
+      &.dark-icon {
+        display: none;
+      }
     }
   }
 
@@ -43,7 +58,7 @@
     font-weight: 500;
 
     @media (max-width: 64rem) {
-      color: $primary;
+      color: $white;
     }
   }
 }

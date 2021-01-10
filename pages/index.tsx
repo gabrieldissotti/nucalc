@@ -126,15 +126,26 @@ export default function Home({ cdi_daily }) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const response = await fetch(`https://api.hgbrasil.com/finance/taxes?key=${process.env.API_KEY}`);
-  const data = await response.json();
+  try {
+    const response = await fetch(`https://api.hgbrasil.com/finance/taxes?key=${process.env.API_KEY}`);
+    const data = await response.json();
 
-  console.log('executed getStaticProps', data)
+    console.log('executed getStaticProps try', data)
 
-  return {
-    props: {
-      cdi_daily: currency(data?.results[0]?.cdi_daily).value
-    },
-    revalidate: UPDATE_CDI_VALUE_EACH_HOUR
+    return {
+      props: {
+        cdi_daily: currency(data?.results[0]?.cdi_daily).value
+      },
+      revalidate: UPDATE_CDI_VALUE_EACH_HOUR
+    }
+  } catch (error) {
+    console.log('executed getStaticProps catch')
+    
+    return {
+      props: {
+        cdi_daily: currency(1.9).value
+      },
+      revalidate: UPDATE_CDI_VALUE_EACH_HOUR
+    }
   }
 }

@@ -8,9 +8,9 @@ export default class MyDocument extends Document {
       <Html>
         <Head>
           {/* START SEO */}
-          <meta property="og:url" content='https://rendimento-nubank-resgate-planejado-1vhoxpb3s.vercel.app' />
-          <meta property="url" content='https://rendimento-nubank-resgate-planejado-1vhoxpb3s.vercel.app' />
-          <meta name="url" content='https://rendimento-nubank-resgate-planejado-1vhoxpb3s.vercel.app' />
+          <meta property="og:url" content='https://nucalc.vercel.app' />
+          <meta property="url" content='https://nucalc.vercel.app' />
+          <meta name="url" content='https://nucalc.vercel.app' />
           <meta property="og:type" content="article" />
           <meta property="type" content="article" />
           <meta name="type" content="article" />
@@ -25,7 +25,7 @@ export default class MyDocument extends Document {
           <meta name="image" content={Cover} />
           <meta property="og:locale" content="pt_BR" />
           <meta property="og:site_name" content="NuCalc" />
-          <meta name="twitter:url" content="https://rendimento-nubank-resgate-planejado-1vhoxpb3s.vercel.app" />
+          <meta name="twitter:url" content="https://nucalc.vercel.app" />
           <meta name="twitter:title" content="NuCalc" />
           <meta name="twitter:description" content="Calcular resgate planejado do Nubank" />
           {/* END SEO */}
@@ -39,15 +39,15 @@ export default class MyDocument extends Document {
           <meta name='format-detection' content='telephone=no' />
           <meta name='mobile-web-app-capable' content='yes' />
           <meta name='msapplication-config' content='/icons/browserconfig.xml' />
-          <meta name='msapplication-TileColor' content='#2B5797' />
+          <meta name='msapplication-TileColor' content='#ffffff' />
           <meta name='msapplication-tap-highlight' content='no' />
-          <meta name='theme-color' content='#000000' />
+          <meta name='theme-color' content='#2B5797' />
                     
           <link rel='apple-touch-icon' sizes='180x180' href='/icons/apple-touch-icon.png' />
           <link rel='icon' type='image/png' sizes='32x32' href='/icons/favicon-32x32.png' />
           <link rel='icon' type='image/png' sizes='16x16' href='/icons/favicon-16x16.png' />
           <link rel='manifest' href='/manifest.json' />
-          <link rel='mask-icon' href='/icons/safari-pinned-tab.svg' color='#2B5797' />
+          <link rel='mask-icon' href='/icons/safari-pinned-tab.svg' color='#ffffff' />
           <link rel='shortcut icon' href='/icons/favicon.ico' />
               
           <meta name='twitter:card' content='summary' />

@@ -1,4 +1,4 @@
-<img src="./docs/cover.png" width="100%" height="auto" alt="Capa do projeto NuCalc"/>
+<img src="./docs/new-cover.png" width="100%" height="auto" alt="Capa do projeto NuCalc"/>
 
 # NuCalc
 

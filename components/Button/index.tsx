@@ -1,7 +1,5 @@
-import React from 'react';
-
 type IProps = {
-  isSelected?: boolean;
+  isSelected?: boolean
   handleSelect(): void
 }
 
@@ -10,8 +8,10 @@ const Button: React.FC<IProps> = ({ children, isSelected, handleSelect }) => {
     <button
       className={`${isSelected && 'isSelected'}`}
       onClick={() => handleSelect()}
-    >{children}</button>
-  );
+    >
+      {children}
+    </button>
+  )
 }
 
-export default Button;
+export default Button

@@ -1,26 +1,24 @@
-import React, { useEffect } from 'react';
-import { useRouter } from "next/router";
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
 
-import * as gtag from "../apis/GoogleAnalyticsAPI";
+import * as gtag from '../apis/GoogleAnalyticsAPI'
 
-import '../styles/main.scss';
+import '../styles/main.scss'
 
 function MyApp({ Component, pageProps }) {
-  const router = useRouter();
+  const router = useRouter()
 
   useEffect(() => {
     const handleRouteChange = (url: URL) => {
-      gtag.pageview(url);
-    };
-    router.events.on("routeChangeComplete", handleRouteChange);
+      gtag.pageview(url)
+    }
+    router.events.on('routeChangeComplete', handleRouteChange)
     return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
-    };
-  }, [router.events]);
+      router.events.off('routeChangeComplete', handleRouteChange)
+    }
+  }, [router.events])
 
-  return (
-    <Component {...pageProps} />
-  )
+  return <Component {...pageProps} />
 }
 
-export default MyApp;
+export default MyApp

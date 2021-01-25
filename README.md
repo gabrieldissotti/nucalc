@@ -36,6 +36,8 @@ Se você pretende contribuir com **documentação, correções de bugs ou proble
 
 Se você pensou em uma **nova funcionalidade** e deseja contribuir para o projeto, você pode enviar sua proposta pelo [linkedin](https://www.linkedin.com/in/gabrieldissotti/) ou pelo email [gabrieldnrodrigues@gmail.com](mailto:gabrieldnrodrigues@gmail.com) para que possamos fazer uma moderação, mas para ser aprovado basta sua proposta responder as seguintes perguntas:
 
-- Qual problema do usuário você vai resolver?
-- Que valor você vai entregar para o projeto e/ou para o usuário?
-- Faça um breve resumo da funcionalidade, se possível incluir um rabisco ou protótipo ilustrando sua ideia, podendo ser imagens ou vídeo.
+1. Qual problema do usuário você vai resolver?
+2. Que valor você vai entregar para o projeto e/ou para o usuário?
+3. Faça um breve resumo da funcionalidade, se possível incluir um rabisco ou protótipo ilustrando sua ideia, podendo ser imagens ou vídeo.
+
+- Após a moderação, faça um fork do projeto, adicione seu código e em seguida faça um pull request para esse projeto.

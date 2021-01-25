@@ -1,32 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<img src="./docs/cover.png" width="100%" height="auto" alt="Capa do projeto NuCalc"/>
 
-## Getting Started
+# NuCalc
 
-First, run the development server:
+Esse projeto busca facilitar o cálculo da rentabilidade no NuBank com o resgate planejado.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Começando
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Pré-requisitos
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Para executar o projeto, será necessário instalar os seguintes programas:
 
-## Learn More
+- NVM versão 0.35 ou superior para [Linux e MacOS](https://github.com/nvm-sh/nvm#Installing-and-Updating) ou [NVM for Windows](https://github.com/coreybutler/nvm-windows) versão 1.1.7 ou superior
 
-To learn more about Next.js, take a look at the following resources:
+- [Yarn](https://yarnpkg.com/getting-started/install) versão 1.22.0 ou superior
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+> Recomendado para Linux, MacOS e Windows
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Como rodar
 
-## Deploy on Vercel
+1. Configure a versão do node para v14.15.1 ou superior, recomendados sempre a versão [LTS](https://nodejs.org/en/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   1.1 Pra isso rode o comando `nvm use a_versao_escolhida`. Por exemplo `nvm use 14.15.1`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   1.2 Confirme a versão do node em execução nesse terminal com `node -v`
 
-just run `vercel` to deploy to preview, and run `vercel --prod` to deploy to production
+2. Instale as dependências executando o comando `yarn` na raiz do projeto.
+
+3. Para rodar o projeto, execute o comando `yarn dev`.
+
+4. Acessar `http://localhost:3000`
+
+## Contribuindo
+
+Se você pretende contribuir com **documentação, correções de bugs ou problemas de segurança**, faça um fork do projeto, adicione seu código e em seguida faça um pull request para esse projeto.
+
+Se você pensou em uma **nova funcionalidade** e deseja contribuir para o projeto, você pode enviar sua proposta pelo [linkedin](https://www.linkedin.com/in/gabrieldissotti/) ou pelo email [gabrieldnrodrigues@gmail.com](mailto:gabrieldnrodrigues@gmail.com) para que possamos fazer uma moderação, mas para ser aprovado basta sua proposta responder as seguintes perguntas:
+
+- Qual problema do usuário você vai resolver?
+- Que valor você vai entregar para o projeto e/ou para o usuário?
+- Faça um breve resumo da funcionalidade, se possível incluir um rabisco ou protótipo ilustrando sua ideia, podendo ser imagens ou vídeo.
